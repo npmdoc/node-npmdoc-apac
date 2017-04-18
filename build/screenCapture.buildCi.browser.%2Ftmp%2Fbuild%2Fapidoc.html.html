@@ -1,0 +1,1361 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/dmcquay/node-apac#readme">apac (v3.0.2)</a>
+</h1>
+<h4>Amazon Product Advertising API Client for Node</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.apac">module apac</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apac.OperationHelper">
+            function <span class="apidocSignatureSpan">apac.</span>OperationHelper
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apac.RequestSignatureHelper">
+            function <span class="apidocSignatureSpan">apac.</span>RequestSignatureHelper
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apac.throttler">
+            function <span class="apidocSignatureSpan">apac.</span>throttler
+            <span class="apidocSignatureSpan">(maxRequestsPerSecond)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan"></span>apac</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">apac.</span>locale</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">apac.</span>operation_helper</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">apac.</span>request_signature_helper</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.apac.OperationHelper">module apac.OperationHelper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apac.OperationHelper.OperationHelper">
+            function <span class="apidocSignatureSpan">apac.</span>OperationHelper
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">apac.OperationHelper.</span>defaultBaseUri</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">apac.OperationHelper.</span>service</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">apac.OperationHelper.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.apac.RequestSignatureHelper">module apac.RequestSignatureHelper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apac.RequestSignatureHelper.RequestSignatureHelper">
+            function <span class="apidocSignatureSpan">apac.</span>RequestSignatureHelper
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">apac.RequestSignatureHelper.</span>kAWSAccessKeyId</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">apac.RequestSignatureHelper.</span>kAWSSecretKey</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">apac.RequestSignatureHelper.</span>kEndPoint</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">apac.RequestSignatureHelper.</span>kRequestMethod</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">apac.RequestSignatureHelper.</span>kRequestUri</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">apac.RequestSignatureHelper.</span>kSignatureParam</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">apac.RequestSignatureHelper.</span>kTimestampParam</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.apac.apac">module apac.apac</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apac.apac.OperationHelper">
+            function <span class="apidocSignatureSpan">apac.apac.</span>OperationHelper
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apac.apac.RequestSignatureHelper">
+            function <span class="apidocSignatureSpan">apac.apac.</span>RequestSignatureHelper
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.apac.locale">module apac.locale</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apac.locale.getEndpointForLocale">
+            function <span class="apidocSignatureSpan">apac.locale.</span>getEndpointForLocale
+            <span class="apidocSignatureSpan">(locale)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">apac.locale.</span>DEFAULT_ENDPOINT</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.apac.operation_helper">module apac.operation_helper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apac.operation_helper.OperationHelper">
+            function <span class="apidocSignatureSpan">apac.operation_helper.</span>OperationHelper
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.apac.request_signature_helper">module apac.request_signature_helper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apac.request_signature_helper.RequestSignatureHelper">
+            function <span class="apidocSignatureSpan">apac.request_signature_helper.</span>RequestSignatureHelper
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.apac.throttler">module apac.throttler</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apac.throttler.throttler">
+            function <span class="apidocSignatureSpan">apac.</span>throttler
+            <span class="apidocSignatureSpan">(maxRequestsPerSecond)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.apac" id="apidoc.module.apac">module apac</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.apac.OperationHelper" id="apidoc.element.apac.OperationHelper">
+        function <span class="apidocSignatureSpan">apac.</span>OperationHelper
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class OperationHelper {
+    constructor(params) {
+        params = params || {}
+
+        // check requried params
+        if (typeof(params.awsId) === 'undefined') {
+            throw new Error('Missing AWS Id param')
+        }
+        if (typeof(params.awsSecret) === 'undefined') {
+            throw new Error('Missing AWS Secret param')
+        }
+        if (typeof(params.assocId) === 'undefined') {
+            throw new Error('Missing Associate Id param')
+        }
+
+        // set instance variables from params
+        this.awsId = params.awsId
+        this.awsSecret = params.awsSecret
+        this.assocId = params.assocId
+        this.endPoint = params.endPoint || locale.getEndpointForLocale(params.locale)
+        this.scheme = params.scheme
+        this.baseUri = params.baseUri || OperationHelper.defaultBaseUri
+        this.xml2jsOptions = Object.assign({}, defaultXml2JsOptions, params.xml2jsOptions)
+        this.throttler = new Throttler(params.maxRequestsPerSecond)
+
+        // set version
+        if (typeof(params.version) === 'string') OperationHelper.version = params.version
+    }
+
+    getSignatureHelper() {
+        if (typeof(this.signatureHelper) === 'undefined') {
+            var params = {}
+            params[RSH.kAWSAccessKeyId] = this.awsId
+            params[RSH.kAWSSecretKey] = this.awsSecret
+            params[RSH.kEndPoint] = this.endPoint
+            this.signatureHelper = new RSH(params)
+        }
+        return this.signatureHelper
+    }
+
+    generateParams(operation, params) {
+        params.Service = OperationHelper.service
+        params.Version = OperationHelper.version
+        params.Operation = operation
+        params.AWSAccessKeyId = this.awsId
+        params.AssociateTag = this.assocId
+        return params
+    }
+
+    generateUri(operation, params) {
+        params = this.generateParams(operation, params)
+        var helper = this.getSignatureHelper()
+        params = helper.sign(params)
+        var queryString = helper.canonicalize(params)
+        return this.baseUri + '?' + queryString
+    }
+
+    execute(operation, params, callback) {
+        const throttledAction = () =&gt; this._execute(operation, params, callback)
+        return this.throttler.execute(throttledAction)
+    }
+
+    _execute(operation, params, callback) {
+        if (typeof(operation) === 'undefined') {
+            throw new Error('Missing operation parameter')
+        }
+        if (typeof(params) === 'undefined') {
+            params = {}
+        }
+
+        var uri = this.generateUri(operation, params)
+        var host = this.endPoint
+        var scheme = this.scheme
+        var xml2jsOptions = this.xml2jsOptions
+
+        var options = {
+            hostname: host,
+            path: uri,
+            method: 'GET'
+        }
+
+        if (scheme) options['scheme'] = scheme;
+
+        var responseBody = ''
+
+        const promise = new Promise((resolve, reject) =&gt; {
+            var request = http.request(options, function (response) {
+                response.setEncoding('utf8')
+
+                response.on('data', function (chunk) {
+                    responseBody += chunk
+                })
+
+                response.on('end', function () {
+                    xml2js.parseString(responseBody, xml2jsOptions, function (err, result) {
+                        if (callback) callback(err, result, responseBody)
+                        else if (err) reject(err)
+                        else resolve({
+                            result,
+                            responseBody
+                        })
+                    })
+                })
+
+            })
+
+            request.on('error', function (err) {
+                if (callback) callback(err)
+                else reject(err)
+            })
+
+            request.end()
+        })
+
+        if (!callback) return promise
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.apac.RequestSignatureHelper" id="apidoc.element.apac.RequestSignatureHelper">
+        function <span class="apidocSignatureSpan">apac.</span>RequestSignatureHelper
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class RSH {
+    constructor(params) {
+        this.init(params)
+    }
+
+    init(params) {
+        // enforce required params
+        if (typeof(params[RSH.kAWSAccessKeyId]) === 'undefined') {
+            throw new Error('Need access key id argument')
+        }
+        if (typeof(params[RSH.kAWSSecretKey]) === 'undefined') {
+            throw new Error('Need secret key argument')
+        }
+        if (typeof(params[RSH.kEndPoint]) === 'undefined') {
+            throw new Error('Need end point argument')
+        }
+
+        // set params
+        this[RSH.kAWSAccessKeyId] = params[RSH.kAWSAccessKeyId]
+        this[RSH.kAWSSecretKey] = params[RSH.kAWSSecretKey]
+        this[RSH.kEndPoint] = params[RSH.kEndPoint].toLowerCase()
+        this[RSH.kRequestMethod] = params[RSH.kRequestMethod] || 'GET'
+        this[RSH.kRequestUri] = params[RSH.kRequestUri] || '/onca/xml'
+    }
+
+    sign(params) {
+        // append params
+        params[RSH.kTimestampParam] = this.generateTimestamp()
+        // generate signature
+        var canonical = this.canonicalize(params)
+        var stringToSign = [
+            this[RSH.kRequestMethod],
+            this[RSH.kEndPoint],
+            this[RSH.kRequestUri],
+            canonical
+        ].join('\n')
+        params[RSH.kSignatureParam] = this.digest(stringToSign)
+
+        return params
+    }
+
+    zeroPad(num, length) {
+        num = num + ''
+        while (num.length &lt; length) {
+            num = '0' + num
+        }
+        return num
+    }
+
+    generateTimestamp() {
+        var now = new Date(),
+            year = now.getUTCFullYear(),
+            month = this.zeroPad(now.getUTCMonth() + 1, 2),
+            day = this.zeroPad(now.getUTCDate(), 2),
+            hours = this.zeroPad(now.getUTCHours(), 2),
+            mins = this.zeroPad(now.getUTCMinutes(), 2),
+            secs = this.zeroPad(now.getUTCSeconds(), 2)
+        return [year, month, day].join('-') + 'T' +
+            [hours, mins, secs].join(':') + 'Z'
+    }
+
+
+<span class="apidocCodeCommentSpan">    /**
+     * Port of PHP rawurlencode().
+     */
+</span>    escape(x) {
+        return encodeURIComponent(x).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29').replace
+(/\*/g, '%2A')
+    }
+
+    digest(x) {
+        var secretKey = this[RSH.kAWSSecretKey]
+        var hmac = crypto.createHmac('sha256', secretKey)
+        hmac.update(x)
+        return hmac.digest('base64')
+    }
+
+    canonicalize(params) {
+        var parts = []
+        for (var key in params) {
+            parts.push([this.escape(key), this.escape(params[key])].join('='))
+        }
+        return parts.sort().join('&amp;')
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.apac.throttler" id="apidoc.element.apac.throttler">
+        function <span class="apidocSignatureSpan">apac.</span>throttler
+        <span class="apidocSignatureSpan">(maxRequestsPerSecond)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Throttler {
+    constructor(maxRequestsPerSecond) {
+        this.maxRequestsPerSecond = maxRequestsPerSecond || 0
+        this._timeBetweenRequestsInMilliSeconds = 1 / this.maxRequestsPerSecond * 1000
+        this._nextAvailableRequestMillis = getNowMillis()
+    }
+
+    execute(cb) {
+        let nowMillis = getNowMillis()
+        if (this.maxRequestsPerSecond === 0) {
+            return Promise.resolve(cb())
+        } else if (nowMillis &gt;= this._nextAvailableRequestMillis) {
+            this._nextAvailableRequestMillis = getNowMillis() + this._timeBetweenRequestsInMilliSeconds
+            return Promise.resolve(cb())
+        } else {
+            return new Promise((resolve) =&gt; {
+                setTimeout(() =&gt; {
+                    resolve(cb())
+                }, this._nextAvailableRequestMillis - nowMillis)
+                this._nextAvailableRequestMillis += this._timeBetweenRequestsInMilliSeconds
+            })
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.apac.OperationHelper" id="apidoc.module.apac.OperationHelper">module apac.OperationHelper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.apac.OperationHelper.OperationHelper" id="apidoc.element.apac.OperationHelper.OperationHelper">
+        function <span class="apidocSignatureSpan">apac.</span>OperationHelper
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class OperationHelper {
+    constructor(params) {
+        params = params || {}
+
+        // check requried params
+        if (typeof(params.awsId) === 'undefined') {
+            throw new Error('Missing AWS Id param')
+        }
+        if (typeof(params.awsSecret) === 'undefined') {
+            throw new Error('Missing AWS Secret param')
+        }
+        if (typeof(params.assocId) === 'undefined') {
+            throw new Error('Missing Associate Id param')
+        }
+
+        // set instance variables from params
+        this.awsId = params.awsId
+        this.awsSecret = params.awsSecret
+        this.assocId = params.assocId
+        this.endPoint = params.endPoint || locale.getEndpointForLocale(params.locale)
+        this.scheme = params.scheme
+        this.baseUri = params.baseUri || OperationHelper.defaultBaseUri
+        this.xml2jsOptions = Object.assign({}, defaultXml2JsOptions, params.xml2jsOptions)
+        this.throttler = new Throttler(params.maxRequestsPerSecond)
+
+        // set version
+        if (typeof(params.version) === 'string') OperationHelper.version = params.version
+    }
+
+    getSignatureHelper() {
+        if (typeof(this.signatureHelper) === 'undefined') {
+            var params = {}
+            params[RSH.kAWSAccessKeyId] = this.awsId
+            params[RSH.kAWSSecretKey] = this.awsSecret
+            params[RSH.kEndPoint] = this.endPoint
+            this.signatureHelper = new RSH(params)
+        }
+        return this.signatureHelper
+    }
+
+    generateParams(operation, params) {
+        params.Service = OperationHelper.service
+        params.Version = OperationHelper.version
+        params.Operation = operation
+        params.AWSAccessKeyId = this.awsId
+        params.AssociateTag = this.assocId
+        return params
+    }
+
+    generateUri(operation, params) {
+        params = this.generateParams(operation, params)
+        var helper = this.getSignatureHelper()
+        params = helper.sign(params)
+        var queryString = helper.canonicalize(params)
+        return this.baseUri + '?' + queryString
+    }
+
+    execute(operation, params, callback) {
+        const throttledAction = () =&gt; this._execute(operation, params, callback)
+        return this.throttler.execute(throttledAction)
+    }
+
+    _execute(operation, params, callback) {
+        if (typeof(operation) === 'undefined') {
+            throw new Error('Missing operation parameter')
+        }
+        if (typeof(params) === 'undefined') {
+            params = {}
+        }
+
+        var uri = this.generateUri(operation, params)
+        var host = this.endPoint
+        var scheme = this.scheme
+        var xml2jsOptions = this.xml2jsOptions
+
+        var options = {
+            hostname: host,
+            path: uri,
+            method: 'GET'
+        }
+
+        if (scheme) options['scheme'] = scheme;
+
+        var responseBody = ''
+
+        const promise = new Promise((resolve, reject) =&gt; {
+            var request = http.request(options, function (response) {
+                response.setEncoding('utf8')
+
+                response.on('data', function (chunk) {
+                    responseBody += chunk
+                })
+
+                response.on('end', function () {
+                    xml2js.parseString(responseBody, xml2jsOptions, function (err, result) {
+                        if (callback) callback(err, result, responseBody)
+                        else if (err) reject(err)
+                        else resolve({
+                            result,
+                            responseBody
+                        })
+                    })
+                })
+
+            })
+
+            request.on('error', function (err) {
+                if (callback) callback(err)
+                else reject(err)
+            })
+
+            request.end()
+        })
+
+        if (!callback) return promise
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.apac.RequestSignatureHelper" id="apidoc.module.apac.RequestSignatureHelper">module apac.RequestSignatureHelper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.apac.RequestSignatureHelper.RequestSignatureHelper" id="apidoc.element.apac.RequestSignatureHelper.RequestSignatureHelper">
+        function <span class="apidocSignatureSpan">apac.</span>RequestSignatureHelper
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class RSH {
+    constructor(params) {
+        this.init(params)
+    }
+
+    init(params) {
+        // enforce required params
+        if (typeof(params[RSH.kAWSAccessKeyId]) === 'undefined') {
+            throw new Error('Need access key id argument')
+        }
+        if (typeof(params[RSH.kAWSSecretKey]) === 'undefined') {
+            throw new Error('Need secret key argument')
+        }
+        if (typeof(params[RSH.kEndPoint]) === 'undefined') {
+            throw new Error('Need end point argument')
+        }
+
+        // set params
+        this[RSH.kAWSAccessKeyId] = params[RSH.kAWSAccessKeyId]
+        this[RSH.kAWSSecretKey] = params[RSH.kAWSSecretKey]
+        this[RSH.kEndPoint] = params[RSH.kEndPoint].toLowerCase()
+        this[RSH.kRequestMethod] = params[RSH.kRequestMethod] || 'GET'
+        this[RSH.kRequestUri] = params[RSH.kRequestUri] || '/onca/xml'
+    }
+
+    sign(params) {
+        // append params
+        params[RSH.kTimestampParam] = this.generateTimestamp()
+        // generate signature
+        var canonical = this.canonicalize(params)
+        var stringToSign = [
+            this[RSH.kRequestMethod],
+            this[RSH.kEndPoint],
+            this[RSH.kRequestUri],
+            canonical
+        ].join('\n')
+        params[RSH.kSignatureParam] = this.digest(stringToSign)
+
+        return params
+    }
+
+    zeroPad(num, length) {
+        num = num + ''
+        while (num.length &lt; length) {
+            num = '0' + num
+        }
+        return num
+    }
+
+    generateTimestamp() {
+        var now = new Date(),
+            year = now.getUTCFullYear(),
+            month = this.zeroPad(now.getUTCMonth() + 1, 2),
+            day = this.zeroPad(now.getUTCDate(), 2),
+            hours = this.zeroPad(now.getUTCHours(), 2),
+            mins = this.zeroPad(now.getUTCMinutes(), 2),
+            secs = this.zeroPad(now.getUTCSeconds(), 2)
+        return [year, month, day].join('-') + 'T' +
+            [hours, mins, secs].join(':') + 'Z'
+    }
+
+
+<span class="apidocCodeCommentSpan">    /**
+     * Port of PHP rawurlencode().
+     */
+</span>    escape(x) {
+        return encodeURIComponent(x).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29').replace
+(/\*/g, '%2A')
+    }
+
+    digest(x) {
+        var secretKey = this[RSH.kAWSSecretKey]
+        var hmac = crypto.createHmac('sha256', secretKey)
+        hmac.update(x)
+        return hmac.digest('base64')
+    }
+
+    canonicalize(params) {
+        var parts = []
+        for (var key in params) {
+            parts.push([this.escape(key), this.escape(params[key])].join('='))
+        }
+        return parts.sort().join('&amp;')
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.apac.apac" id="apidoc.module.apac.apac">module apac.apac</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.apac.apac.OperationHelper" id="apidoc.element.apac.apac.OperationHelper">
+        function <span class="apidocSignatureSpan">apac.apac.</span>OperationHelper
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class OperationHelper {
+    constructor(params) {
+        params = params || {}
+
+        // check requried params
+        if (typeof(params.awsId) === 'undefined') {
+            throw new Error('Missing AWS Id param')
+        }
+        if (typeof(params.awsSecret) === 'undefined') {
+            throw new Error('Missing AWS Secret param')
+        }
+        if (typeof(params.assocId) === 'undefined') {
+            throw new Error('Missing Associate Id param')
+        }
+
+        // set instance variables from params
+        this.awsId = params.awsId
+        this.awsSecret = params.awsSecret
+        this.assocId = params.assocId
+        this.endPoint = params.endPoint || locale.getEndpointForLocale(params.locale)
+        this.scheme = params.scheme
+        this.baseUri = params.baseUri || OperationHelper.defaultBaseUri
+        this.xml2jsOptions = Object.assign({}, defaultXml2JsOptions, params.xml2jsOptions)
+        this.throttler = new Throttler(params.maxRequestsPerSecond)
+
+        // set version
+        if (typeof(params.version) === 'string') OperationHelper.version = params.version
+    }
+
+    getSignatureHelper() {
+        if (typeof(this.signatureHelper) === 'undefined') {
+            var params = {}
+            params[RSH.kAWSAccessKeyId] = this.awsId
+            params[RSH.kAWSSecretKey] = this.awsSecret
+            params[RSH.kEndPoint] = this.endPoint
+            this.signatureHelper = new RSH(params)
+        }
+        return this.signatureHelper
+    }
+
+    generateParams(operation, params) {
+        params.Service = OperationHelper.service
+        params.Version = OperationHelper.version
+        params.Operation = operation
+        params.AWSAccessKeyId = this.awsId
+        params.AssociateTag = this.assocId
+        return params
+    }
+
+    generateUri(operation, params) {
+        params = this.generateParams(operation, params)
+        var helper = this.getSignatureHelper()
+        params = helper.sign(params)
+        var queryString = helper.canonicalize(params)
+        return this.baseUri + '?' + queryString
+    }
+
+    execute(operation, params, callback) {
+        const throttledAction = () =&gt; this._execute(operation, params, callback)
+        return this.throttler.execute(throttledAction)
+    }
+
+    _execute(operation, params, callback) {
+        if (typeof(operation) === 'undefined') {
+            throw new Error('Missing operation parameter')
+        }
+        if (typeof(params) === 'undefined') {
+            params = {}
+        }
+
+        var uri = this.generateUri(operation, params)
+        var host = this.endPoint
+        var scheme = this.scheme
+        var xml2jsOptions = this.xml2jsOptions
+
+        var options = {
+            hostname: host,
+            path: uri,
+            method: 'GET'
+        }
+
+        if (scheme) options['scheme'] = scheme;
+
+        var responseBody = ''
+
+        const promise = new Promise((resolve, reject) =&gt; {
+            var request = http.request(options, function (response) {
+                response.setEncoding('utf8')
+
+                response.on('data', function (chunk) {
+                    responseBody += chunk
+                })
+
+                response.on('end', function () {
+                    xml2js.parseString(responseBody, xml2jsOptions, function (err, result) {
+                        if (callback) callback(err, result, responseBody)
+                        else if (err) reject(err)
+                        else resolve({
+                            result,
+                            responseBody
+                        })
+                    })
+                })
+
+            })
+
+            request.on('error', function (err) {
+                if (callback) callback(err)
+                else reject(err)
+            })
+
+            request.end()
+        })
+
+        if (!callback) return promise
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.apac.apac.RequestSignatureHelper" id="apidoc.element.apac.apac.RequestSignatureHelper">
+        function <span class="apidocSignatureSpan">apac.apac.</span>RequestSignatureHelper
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class RSH {
+    constructor(params) {
+        this.init(params)
+    }
+
+    init(params) {
+        // enforce required params
+        if (typeof(params[RSH.kAWSAccessKeyId]) === 'undefined') {
+            throw new Error('Need access key id argument')
+        }
+        if (typeof(params[RSH.kAWSSecretKey]) === 'undefined') {
+            throw new Error('Need secret key argument')
+        }
+        if (typeof(params[RSH.kEndPoint]) === 'undefined') {
+            throw new Error('Need end point argument')
+        }
+
+        // set params
+        this[RSH.kAWSAccessKeyId] = params[RSH.kAWSAccessKeyId]
+        this[RSH.kAWSSecretKey] = params[RSH.kAWSSecretKey]
+        this[RSH.kEndPoint] = params[RSH.kEndPoint].toLowerCase()
+        this[RSH.kRequestMethod] = params[RSH.kRequestMethod] || 'GET'
+        this[RSH.kRequestUri] = params[RSH.kRequestUri] || '/onca/xml'
+    }
+
+    sign(params) {
+        // append params
+        params[RSH.kTimestampParam] = this.generateTimestamp()
+        // generate signature
+        var canonical = this.canonicalize(params)
+        var stringToSign = [
+            this[RSH.kRequestMethod],
+            this[RSH.kEndPoint],
+            this[RSH.kRequestUri],
+            canonical
+        ].join('\n')
+        params[RSH.kSignatureParam] = this.digest(stringToSign)
+
+        return params
+    }
+
+    zeroPad(num, length) {
+        num = num + ''
+        while (num.length &lt; length) {
+            num = '0' + num
+        }
+        return num
+    }
+
+    generateTimestamp() {
+        var now = new Date(),
+            year = now.getUTCFullYear(),
+            month = this.zeroPad(now.getUTCMonth() + 1, 2),
+            day = this.zeroPad(now.getUTCDate(), 2),
+            hours = this.zeroPad(now.getUTCHours(), 2),
+            mins = this.zeroPad(now.getUTCMinutes(), 2),
+            secs = this.zeroPad(now.getUTCSeconds(), 2)
+        return [year, month, day].join('-') + 'T' +
+            [hours, mins, secs].join(':') + 'Z'
+    }
+
+
+<span class="apidocCodeCommentSpan">    /**
+     * Port of PHP rawurlencode().
+     */
+</span>    escape(x) {
+        return encodeURIComponent(x).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29').replace
+(/\*/g, '%2A')
+    }
+
+    digest(x) {
+        var secretKey = this[RSH.kAWSSecretKey]
+        var hmac = crypto.createHmac('sha256', secretKey)
+        hmac.update(x)
+        return hmac.digest('base64')
+    }
+
+    canonicalize(params) {
+        var parts = []
+        for (var key in params) {
+            parts.push([this.escape(key), this.escape(params[key])].join('='))
+        }
+        return parts.sort().join('&amp;')
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.apac.locale" id="apidoc.module.apac.locale">module apac.locale</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.apac.locale.getEndpointForLocale" id="apidoc.element.apac.locale.getEndpointForLocale">
+        function <span class="apidocSignatureSpan">apac.locale.</span>getEndpointForLocale
+        <span class="apidocSignatureSpan">(locale)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(locale) =&gt; {
+    return ENDPOINTS_BY_LOCALE[locale] || DEFAULT_ENDPOINT
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    throw new Error('Missing Associate Id param')
+}
+
+// set instance variables from params
+this.awsId = params.awsId
+this.awsSecret = params.awsSecret
+this.assocId = params.assocId
+this.endPoint = params.endPoint || locale.<span class="apidocCodeKeywordSpan">getEndpointForLocale</span>(params.locale)
+this.scheme = params.scheme
+this.baseUri = params.baseUri || OperationHelper.defaultBaseUri
+this.xml2jsOptions = Object.assign({}, defaultXml2JsOptions, params.xml2jsOptions)
+this.throttler = new Throttler(params.maxRequestsPerSecond)
+
+// set version
+if (typeof(params.version) === 'string') OperationHelper.version = params.version
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.apac.operation_helper" id="apidoc.module.apac.operation_helper">module apac.operation_helper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.apac.operation_helper.OperationHelper" id="apidoc.element.apac.operation_helper.OperationHelper">
+        function <span class="apidocSignatureSpan">apac.operation_helper.</span>OperationHelper
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class OperationHelper {
+    constructor(params) {
+        params = params || {}
+
+        // check requried params
+        if (typeof(params.awsId) === 'undefined') {
+            throw new Error('Missing AWS Id param')
+        }
+        if (typeof(params.awsSecret) === 'undefined') {
+            throw new Error('Missing AWS Secret param')
+        }
+        if (typeof(params.assocId) === 'undefined') {
+            throw new Error('Missing Associate Id param')
+        }
+
+        // set instance variables from params
+        this.awsId = params.awsId
+        this.awsSecret = params.awsSecret
+        this.assocId = params.assocId
+        this.endPoint = params.endPoint || locale.getEndpointForLocale(params.locale)
+        this.scheme = params.scheme
+        this.baseUri = params.baseUri || OperationHelper.defaultBaseUri
+        this.xml2jsOptions = Object.assign({}, defaultXml2JsOptions, params.xml2jsOptions)
+        this.throttler = new Throttler(params.maxRequestsPerSecond)
+
+        // set version
+        if (typeof(params.version) === 'string') OperationHelper.version = params.version
+    }
+
+    getSignatureHelper() {
+        if (typeof(this.signatureHelper) === 'undefined') {
+            var params = {}
+            params[RSH.kAWSAccessKeyId] = this.awsId
+            params[RSH.kAWSSecretKey] = this.awsSecret
+            params[RSH.kEndPoint] = this.endPoint
+            this.signatureHelper = new RSH(params)
+        }
+        return this.signatureHelper
+    }
+
+    generateParams(operation, params) {
+        params.Service = OperationHelper.service
+        params.Version = OperationHelper.version
+        params.Operation = operation
+        params.AWSAccessKeyId = this.awsId
+        params.AssociateTag = this.assocId
+        return params
+    }
+
+    generateUri(operation, params) {
+        params = this.generateParams(operation, params)
+        var helper = this.getSignatureHelper()
+        params = helper.sign(params)
+        var queryString = helper.canonicalize(params)
+        return this.baseUri + '?' + queryString
+    }
+
+    execute(operation, params, callback) {
+        const throttledAction = () =&gt; this._execute(operation, params, callback)
+        return this.throttler.execute(throttledAction)
+    }
+
+    _execute(operation, params, callback) {
+        if (typeof(operation) === 'undefined') {
+            throw new Error('Missing operation parameter')
+        }
+        if (typeof(params) === 'undefined') {
+            params = {}
+        }
+
+        var uri = this.generateUri(operation, params)
+        var host = this.endPoint
+        var scheme = this.scheme
+        var xml2jsOptions = this.xml2jsOptions
+
+        var options = {
+            hostname: host,
+            path: uri,
+            method: 'GET'
+        }
+
+        if (scheme) options['scheme'] = scheme;
+
+        var responseBody = ''
+
+        const promise = new Promise((resolve, reject) =&gt; {
+            var request = http.request(options, function (response) {
+                response.setEncoding('utf8')
+
+                response.on('data', function (chunk) {
+                    responseBody += chunk
+                })
+
+                response.on('end', function () {
+                    xml2js.parseString(responseBody, xml2jsOptions, function (err, result) {
+                        if (callback) callback(err, result, responseBody)
+                        else if (err) reject(err)
+                        else resolve({
+                            result,
+                            responseBody
+                        })
+                    })
+                })
+
+            })
+
+            request.on('error', function (err) {
+                if (callback) callback(err)
+                else reject(err)
+            })
+
+            request.end()
+        })
+
+        if (!callback) return promise
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.apac.request_signature_helper" id="apidoc.module.apac.request_signature_helper">module apac.request_signature_helper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.apac.request_signature_helper.RequestSignatureHelper" id="apidoc.element.apac.request_signature_helper.RequestSignatureHelper">
+        function <span class="apidocSignatureSpan">apac.request_signature_helper.</span>RequestSignatureHelper
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class RSH {
+    constructor(params) {
+        this.init(params)
+    }
+
+    init(params) {
+        // enforce required params
+        if (typeof(params[RSH.kAWSAccessKeyId]) === 'undefined') {
+            throw new Error('Need access key id argument')
+        }
+        if (typeof(params[RSH.kAWSSecretKey]) === 'undefined') {
+            throw new Error('Need secret key argument')
+        }
+        if (typeof(params[RSH.kEndPoint]) === 'undefined') {
+            throw new Error('Need end point argument')
+        }
+
+        // set params
+        this[RSH.kAWSAccessKeyId] = params[RSH.kAWSAccessKeyId]
+        this[RSH.kAWSSecretKey] = params[RSH.kAWSSecretKey]
+        this[RSH.kEndPoint] = params[RSH.kEndPoint].toLowerCase()
+        this[RSH.kRequestMethod] = params[RSH.kRequestMethod] || 'GET'
+        this[RSH.kRequestUri] = params[RSH.kRequestUri] || '/onca/xml'
+    }
+
+    sign(params) {
+        // append params
+        params[RSH.kTimestampParam] = this.generateTimestamp()
+        // generate signature
+        var canonical = this.canonicalize(params)
+        var stringToSign = [
+            this[RSH.kRequestMethod],
+            this[RSH.kEndPoint],
+            this[RSH.kRequestUri],
+            canonical
+        ].join('\n')
+        params[RSH.kSignatureParam] = this.digest(stringToSign)
+
+        return params
+    }
+
+    zeroPad(num, length) {
+        num = num + ''
+        while (num.length &lt; length) {
+            num = '0' + num
+        }
+        return num
+    }
+
+    generateTimestamp() {
+        var now = new Date(),
+            year = now.getUTCFullYear(),
+            month = this.zeroPad(now.getUTCMonth() + 1, 2),
+            day = this.zeroPad(now.getUTCDate(), 2),
+            hours = this.zeroPad(now.getUTCHours(), 2),
+            mins = this.zeroPad(now.getUTCMinutes(), 2),
+            secs = this.zeroPad(now.getUTCSeconds(), 2)
+        return [year, month, day].join('-') + 'T' +
+            [hours, mins, secs].join(':') + 'Z'
+    }
+
+
+<span class="apidocCodeCommentSpan">    /**
+     * Port of PHP rawurlencode().
+     */
+</span>    escape(x) {
+        return encodeURIComponent(x).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29').replace
+(/\*/g, '%2A')
+    }
+
+    digest(x) {
+        var secretKey = this[RSH.kAWSSecretKey]
+        var hmac = crypto.createHmac('sha256', secretKey)
+        hmac.update(x)
+        return hmac.digest('base64')
+    }
+
+    canonicalize(params) {
+        var parts = []
+        for (var key in params) {
+            parts.push([this.escape(key), this.escape(params[key])].join('='))
+        }
+        return parts.sort().join('&amp;')
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.apac.throttler" id="apidoc.module.apac.throttler">module apac.throttler</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.apac.throttler.throttler" id="apidoc.element.apac.throttler.throttler">
+        function <span class="apidocSignatureSpan">apac.</span>throttler
+        <span class="apidocSignatureSpan">(maxRequestsPerSecond)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Throttler {
+    constructor(maxRequestsPerSecond) {
+        this.maxRequestsPerSecond = maxRequestsPerSecond || 0
+        this._timeBetweenRequestsInMilliSeconds = 1 / this.maxRequestsPerSecond * 1000
+        this._nextAvailableRequestMillis = getNowMillis()
+    }
+
+    execute(cb) {
+        let nowMillis = getNowMillis()
+        if (this.maxRequestsPerSecond === 0) {
+            return Promise.resolve(cb())
+        } else if (nowMillis &gt;= this._nextAvailableRequestMillis) {
+            this._nextAvailableRequestMillis = getNowMillis() + this._timeBetweenRequestsInMilliSeconds
+            return Promise.resolve(cb())
+        } else {
+            return new Promise((resolve) =&gt; {
+                setTimeout(() =&gt; {
+                    resolve(cb())
+                }, this._nextAvailableRequestMillis - nowMillis)
+                this._nextAvailableRequestMillis += this._timeBetweenRequestsInMilliSeconds
+            })
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
