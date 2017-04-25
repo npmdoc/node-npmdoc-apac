@@ -1,6 +1,6 @@
 # npmdoc-apac
 
-#### api documentation for  [apac (v3.0.2)](https://github.com/dmcquay/node-apac#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-apac.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-apac) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-apac.svg)](https://travis-ci.org/npmdoc/node-npmdoc-apac)
+#### basic api documentation for  [apac (v3.0.2)](https://github.com/dmcquay/node-apac#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-apac.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-apac) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-apac.svg)](https://travis-ci.org/npmdoc/node-npmdoc-apac)
 
 #### Amazon Product Advertising API Client for Node
 
@@ -79,7 +79,8 @@
         "test": "mocha lib/*.specs.js",
         "test:acceptance": "mocha test/acceptance/*.specs.js || true"
     },
-    "version": "3.0.2"
+    "version": "3.0.2",
+    "bin": {}
 }
 ```
 
